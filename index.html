@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalton Thomas CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+        }
+    </script>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+        } else {
+        document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 dark:bg-slate-800 text-slate-800 dark:text-gray-100 font-sans max-w-6xl mx-auto px-8">
+    
+    <header id="personal-details" class="text-center pb-20">
+        <div class="text-5xl pt-10 pb-6">Dalton Thomas</div>
+        <div>
+            <a id="linkedin" class="text-2xl p-3 hover:border-4 rounded-lg border-red-900 outline-red-900 outline-4" href="https://www.linkedin.com/in/dalton-thomas/">linkedin.com/in/dalton-thomas</a>
+            <span  class="text-2xl p-3">daltonthomas92@gmail.com</span>
+            <span class="text-2xl p-3">Hereford, UK</span>
+        </div>
+    </header>
+
+    <button id="toggle-dark-mode" class="bg-slate-700 dark:bg-gray-100 text-gray-100 dark:text-slate-800 fixed top-4 right-4 text-xl rounded border-2 border-slate-600 p-1 hover:scale-125 duration-150 focus:scale-125 hover:border-4 hover:border-red-900 outline-red-900 outline-4" onclick="toggleDarkMode()">Dark</button>
+
+    <script>
+        function toggleDarkMode() {
+            const isDarkMode = document.documentElement.classList.toggle("dark");
+        const buttonText = isDarkMode ? "Light" : "Dark";
+        document.getElementById("toggle-dark-mode").textContent = buttonText;
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const isDarkMode = document.documentElement.classList.contains("dark");
+            document.getElementById("toggle-dark-mode").textContent = isDarkMode ? "Light" : "Dark";
+        });
+    </script>
+
+    <main>
+        <div id="professional-summary" class="border-2 dark:border-slate-900 rounded-lg p-5 mb-5">
+            <h2 id="professional-summary-title" class="text-3xl text-center pb-5">Professional Summary</h2>
+        
+            <p>
+                With a decade of experience in the British Army and now nearing the completion of my degree, I am excited to embark on a new journey as a software engineer. My background in the British Army has taught me the value of teamwork, attention to detail, and adaptability. I am eager to bring this unique blend of experience to a graduate role in software engineering and my goal is to make a positive impact in your company, leveraging these skills to contribute to challenging projects. 
+            </p>
+        </div>
+
+        
+
+        <div id="education" class="border-2 dark:border-slate-900 rounded-lg p-5 mb-5">
+            <h2 class="text-3xl text-center pb-5">Education</h2>
+            <h3 class="text-xl pb-1">The Open University</h3>
+            <p class="pb-1">Expected: Aug 2024</p>
+            <ul class="list-disc pl-10">
+                <li>BSc (Honours) Computing and IT (Software)</li>
+                <ul class="list-none">
+                    <li>Modules: Software Engineering, Data Management & Analysis, Data Structures & Algorithms with Python, OOP with Java, Databases with PostgreSQL.</li>
+                </ul>
+            </ul>
+        </div>
+
+        
+
+        <div id="professional-experience" class="border-2 dark:border-slate-900 rounded-lg p-5 mb-5">
+            <h2 id="professional-experience-title" class="text-3xl text-center pb-5"  >Professional Experience</h2>
+
+            <div>
+                <h3 class="text-xl pb-1">Centrica (FTSE 100) - Software Engineer Intern: Hybrid</h3>
+                <p class="pb-1">Jun 2023 - Aug 2023</p>
+                <ul class="list-disc pl-10 pb-5">
+                    <li>
+                        Developed and launched a VS Code language server and extension on the VS Code marketplace. This tool, tailored to Centrica's design system for the British Gas website, suggests and autocompletes keywords, enhancing developer productivity.
+                    </li>
+                    <li>
+                        Worked with a frontend team, who developed and maintained a design system, in a Kanban Agile environment using GitHub for collaboration and Git for source control.
+                    </li>
+                    <li>
+                        Collaborated with my charity team in a charity challenge to raise awareness for our chosen charity. We were ultimately awarded the winning team for our efforts and a substantial donation was given to our chosen charity.  
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl pb-1">Business Analyst: Remote</h3>
+                <p class="pb-1">Mar 2022 - Sep 2022</p>
+                <ul class="list-disc pl-10 pb-5">
+                    <li>Contributed to the successful conversion of 4 paper-based systems into software-based systems, while studying a full-time degree.</li>
+                    <li>Collected and analysed requirements from clients producing solution design/business requirements documents for each project.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl pb-1">British Army - Commanding Officer's RSDC: Bulford, England</h3>
+                <p class="pb-1">Oct 2018 - Sep 2021</p>
+                <ul class="list-disc pl-10 pb-5">
+                    <li>Managed vehicle network: troubleshot hardware, software, and network related issues. Comprised of 15 endpoints and 25 tactical radios in a group of 5 command vehicles.</li>
+                    <li>Increased vehicle network functionality 15% by fault-finding and repairing/replacing faulty networking and communications equipment.</li>
+                    <li>Actioned and documented ~100 equipment repairs/replacements, liaising with the repair chain and staff that reported the equipment failure.</li>
+                    <li>Achieved a 100% pass rate for ~400 staff taught on telecommunication courses.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl pb-1">British Army: Paderborn, Germany and Bulford, England</h3>
+                <p class="pb-1">Feb 2011 - Oct 2018</p>
+                <ul class="list-disc pl-10">
+                    <li>Held various technical and non-technical roles during service tenure.</li>
+                </ul>
+            </div>
+        </div>
+
+       
+
+        <div class="border-2 dark:border-slate-900 rounded-lg p-5 mb-5">
+            <h2 class="text-3xl text-center pb-5">Certifications</h2>
+            <h3 class="text-xl pb-1">CompTIA</h3>
+            <ul class="list-disc pl-10">
+                <li>CompTIA Network+</li>
+                <li>CompTIA A+</li>
+            </ul>
+            <h3 class="text-xl pb-1">Chartered Management Institute</h3>
+            <ul class="list-disc pl-10">
+                <li>Level 3 Diploma in First Line Management</li>
+            </ul>
+        </div>
+
+        
+
+    </main>
+
+</body>
+</html>
